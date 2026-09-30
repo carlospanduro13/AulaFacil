@@ -60,6 +60,7 @@ document.querySelector('.video-play')?.addEventListener('click', (event) => {
 });
 
 const form = document.querySelector('#lead-form');
+const surveyForm = document.querySelector('#survey-form');
 const googleSheetsUrl = document.querySelector('meta[name="google-sheets-web-app-url"]')?.content.trim() || '';
 
 function setSubmitting(isSubmitting) {
@@ -87,6 +88,24 @@ async function sendLeadToGoogleSheets(lead) {
   });
 
   // Apps Script redirige la respuesta; no-cors permite el envío desde un sitio estático.
+  await fetch(googleSheetsUrl, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+    body: payload.toString()
+  });
+}
+
+async function sendSurveyToGoogleSheets(answers) {
+  if (!googleSheetsUrl || !/^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(googleSheetsUrl)) {
+    throw new Error('Google Sheets todavía no está configurado.');
+  }
+  const payload = new URLSearchParams({
+    tipo: 'encuesta',
+    ...answers,
+    website: answers.website || '',
+    origen: window.location.href
+  });
   await fetch(googleSheetsUrl, {
     method: 'POST',
     mode: 'no-cors',
@@ -148,6 +167,51 @@ form?.addEventListener('submit', async (event) => {
     submitError.classList.add('visible');
   } finally {
     setSubmitting(false);
+  }
+});
+
+surveyForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const requiredFields = ['nivel', 'area', 'tema', 'dificultad', 'formato', 'dispositivo', 'precio'];
+  let valid = true;
+  const submitError = surveyForm.querySelector('.form-submit-error');
+  submitError.classList.remove('visible');
+  submitError.textContent = '';
+
+  requiredFields.forEach((fieldName) => {
+    const field = surveyForm.elements[fieldName];
+    const wrapper = field.closest('.input-wrap');
+    const error = surveyForm.querySelector(`[data-error="${fieldName}"]`);
+    wrapper.classList.remove('invalid');
+    error.textContent = '';
+    if (!field.value.trim()) {
+      valid = false;
+      wrapper.classList.add('invalid');
+      error.textContent = 'Completa esta respuesta.';
+    }
+  });
+  if (!valid) {
+    surveyForm.querySelector('.input-wrap.invalid input, .input-wrap.invalid select')?.focus();
+    return;
+  }
+
+  const button = surveyForm.querySelector('button[type="submit"]');
+  const label = button.querySelector('.button-label');
+  button.disabled = true;
+  surveyForm.classList.add('is-submitting');
+  label.textContent = 'Enviando respuestas...';
+  try {
+    const answers = Object.fromEntries(new FormData(surveyForm).entries());
+    await sendSurveyToGoogleSheets(answers);
+    surveyForm.querySelector('.form-success').classList.add('visible');
+    surveyForm.reset();
+  } catch (error) {
+    submitError.textContent = 'No pudimos enviar la encuesta. Revisa tu conexión e inténtalo nuevamente.';
+    submitError.classList.add('visible');
+  } finally {
+    button.disabled = false;
+    surveyForm.classList.remove('is-submitting');
+    label.textContent = 'Enviar mis respuestas';
   }
 });
 
