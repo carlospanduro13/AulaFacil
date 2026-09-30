@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AulaFácil reúne clases cortas, resúmenes y ejercicios para ayudarte a dominar tus cursos y rendir mejor en tus exámenes.">
+  <meta name="theme-color" content="#fffaf4">
+  <!-- Pega aquí la URL /exec de tu implementación de Google Apps Script. -->
+  <meta name="google-sheets-web-app-url" content="https://script.google.com/macros/s/AKfycbztG5f03BzR20gBYpY4EZ7dVahva3-mTfsO-z8hUxw7H9aBqYSgizolk0F-6Kpzug04rg/exec">
+  <title>AulaFácil — Aprende claro. Aprueba seguro.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="AulaFácil, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img"><path d="M8.5 11.5 20 6l11.5 5.5L20 17 8.5 11.5Z"/><path d="M12 15.5v7.7c0 2 3.6 4.8 8 4.8s8-2.8 8-4.8v-7.7"/><path d="M32 13v10"/></svg>
+        </span>
+        <span>Aula<span>Fácil</span></span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#curso">Curso piloto</a>
+        <a href="#precio">Precio</a>
+        <a class="button button-small button-outline" href="#leccion-gratis">Probar gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-pad">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Aprende a tu ritmo, desde cualquier lugar</div>
+          <h1>Domina tus cursos.<br><span>Aprueba sin estrés.</span></h1>
+          <p class="hero-lead">Tu profesor particular de bolsillo: clases cortas en video, resúmenes organizados y ejercicios prácticos adaptados a tu nivel.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#leccion-gratis">Empieza a estudiar gratis <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#curso"><span class="play-icon" aria-hidden="true">▶</span> Ver curso piloto</a>
+          </div>
+          <div class="hero-trust" aria-label="Ventajas principales">
+            <div class="mini-avatars" aria-hidden="true"><span>JM</span><span>AL</span><span>DV</span></div>
+            <div><strong>Contenido claro y directo</strong><small>Sin clases largas. Sin buscar por horas.</small></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="Vista previa de una lección de AulaFácil">
+          <div class="float-pill pill-top"><span>✓</span> Lección completada</div>
+          <div class="app-window">
+            <div class="window-bar"><i></i><i></i><i></i><span>aulafacil.pe / mi-curso</span></div>
+            <div class="app-shell">
+              <aside class="course-sidebar">
+                <div class="sidebar-brand"><span class="mini-logo">A</span><strong>AulaFácil</strong></div>
+                <p>ÁLGEBRA</p>
+                <button class="lesson-item active" type="button"><span>01</span><b>Ecuaciones</b><i>12 min</i></button>
+                <button class="lesson-item" type="button"><span>02</span><b>Inecuaciones</b><i>8 min</i></button>
+                <button class="lesson-item" type="button"><span>03</span><b>Problemas</b><i>10 min</i></button>
+                <div class="sidebar-progress"><div><span>Tu progreso</span><b>68%</b></div><em><i></i></em></div>
+              </aside>
+              <div class="lesson-main">
+                <div class="lesson-top"><span>Módulo 1 · Lección 3</span><span class="level-tag">Nivel básico</span></div>
+                <h3>Resolvemos ecuaciones<br>paso a paso</h3>
+                <div class="video-card">
+                  <div class="math-scribble">2x + 4 = 12</div>
+                  <button class="video-play" type="button" aria-label="Reproducir demostración"><span>▶</span></button>
+                  <div class="video-controls"><span></span><i>05:42</i></div>
+                </div>
+                <div class="quick-question">
+                  <div><span class="question-icon">?</span><p><small>COMPRUEBA LO APRENDIDO</small><strong>Si 3x + 5 = 20, ¿cuánto vale x?</strong></p></div>
+                  <div class="answers"><button type="button">3</button><button type="button" data-correct>5</button><button type="button">8</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-pill pill-bottom"><span>⚡</span><div><b>Racha de estudio</b><small>5 días seguidos</small></div></div>
+        </div>
+      </div>
+      <div class="container hero-footnote reveal"><span>✦</span> Diseñado para estudiantes de secundaria, institutos y postulantes</div>
+    </section>
+
+    <section class="problem section-pad" id="problema">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div class="eyebrow eyebrow-coral">¿Te identificas?</div>
+          <h2>Estudiar para un examen no debería sentirse como <span>resolver otro problema.</span></h2>
+          <p>Sabemos lo frustrante que es querer avanzar y no encontrar la ayuda correcta.</p>
+        </div>
+        <div class="pain-grid">
+          <article class="pain-card reveal">
+            <div class="icon-box coral" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m10 10-5.5 5.5a2.1 2.1 0 0 0 3 3L13 13"/><path d="m14 14 5.5-5.5a2.1 2.1 0 0 0-3-3L11 11"/><path d="m8 12 4 4M12 8l4 4"/></svg>
+            </div>
+            <h3>Materiales dispersos</h3>
+            <p>Pierdes horas buscando videos que expliquen justo lo que viene en tu examen y sigan tu temario.</p>
+            <span class="pain-number">01</span>
+          </article>
+          <article class="pain-card reveal delay-1">
+            <div class="icon-box yellow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 8.5c-.7-.5-1.5-.8-2.5-.8-1.4 0-2.5.7-2.5 1.8 0 2.8 5 1.2 5 4.3 0 1.3-1.2 2.2-2.8 2.2-1.1 0-2.2-.4-3-1.1M12 5.7v12.6"/></svg>
+            </div>
+            <h3>Clases muy costosas</h3>
+            <p>Pagar por hora a un tutor particular no siempre está al alcance de tu bolsillo o el de tu familia.</p>
+            <span class="pain-number">02</span>
+          </article>
+          <article class="pain-card reveal delay-2">
+            <div class="icon-box blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.5 4H6a2 2 0 0 0-2 2v14h14v-4"/><path d="m8 16 1.5-4.5L17 4l3 3-7.5 7.5L8 16Z"/><path d="m15 6 3 3"/></svg>
+            </div>
+            <h3>Teoría sin práctica</h3>
+            <p>Entiendes el video, pero cuando te enfrentas a los ejercicios del examen no sabes cómo empezar.</p>
+            <span class="pain-number">03</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution section-pad" id="como-funciona">
+      <div class="container solution-grid">
+        <div class="solution-visual reveal">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-head"><div><small>Buenos días,</small><strong>¡Vamos a aprender! 👋</strong></div><span>JM</span></div>
+              <div class="phone-progress"><div><span>Progreso semanal</span><b>4 de 6 lecciones</b></div><em><i></i></em></div>
+              <p class="phone-title">Continúa aprendiendo</p>
+              <div class="phone-course"><div class="course-art">x²</div><div><small>ÁLGEBRA</small><b>Funciones y gráficas</b><span>Lección 2 de 4</span></div></div>
+              <p class="phone-title">Tu práctica de hoy</p>
+              <div class="phone-quiz"><span>✓</span><div><b>Test rápido</b><small>10 preguntas · 8 min</small></div><i>›</i></div>
+            </div>
+          </div>
+          <div class="float-card score-card"><span>92%</span><div><b>¡Excelente!</b><small>Resultado del test</small></div></div>
+          <div class="float-card time-card"><span>⏱</span><div><b>20 minutos</b><small>para dominar el tema</small></div></div>
+        </div>
+
+        <div class="solution-copy">
+          <div class="section-heading reveal">
+            <div class="eyebrow eyebrow-blue">Así funciona AulaFácil</div>
+            <h2>Todo lo que necesitas para aprobar, <span>en un solo lugar.</span></h2>
+            <p>Avanza a tu ritmo con una ruta clara: aprende, practica y comprueba cuánto sabes.</p>
+          </div>
+          <div class="feature-list">
+            <article class="feature-item reveal">
+              <span>1</span><div><h3>Videos cortos y al grano</h3><p>Explicaciones claras de 5 a 8 minutos sobre los temas más difíciles de tu curso.</p></div>
+            </article>
+            <article class="feature-item reveal delay-1">
+              <span>2</span><div><h3>Practica y evalúa tu nivel</h3><p>Resuelve ejercicios después de cada lección y descubre qué necesitas reforzar.</p></div>
+            </article>
+            <article class="feature-item reveal delay-2">
+              <span>3</span><div><h3>Organizado por curso y nivel</h3><p>Encuentra exactamente el tema de tu próximo examen sin perder más tiempo.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="course-section section-pad" id="curso">
+      <div class="container">
+        <div class="section-heading course-heading reveal">
+          <div>
+            <div class="eyebrow eyebrow-yellow">Curso destacado de lanzamiento</div>
+            <h2>Álgebra para exámenes de <span>admisión y secundaria.</span></h2>
+          </div>
+          <span class="coming-tag"><i></i> Próximamente más cursos</span>
+        </div>
+        <div class="course-panel reveal">
+          <div class="course-summary">
+            <div class="summary-art">
+              <div class="grid-lines"></div><span>x²</span><i>y = mx + b</i><b>√a</b>
+            </div>
+            <div class="summary-copy">
+              <span class="course-label">CURSO PILOTO</span>
+              <h3>Álgebra esencial</h3>
+              <p>Domina los temas que más aparecen en tus exámenes con explicaciones sencillas y mucha práctica.</p>
+              <div class="course-stats"><span><b>10</b> videos</span><span><b>3</b> tests</span><span><b>+40</b> ejercicios</span></div>
+              <a class="button button-dark" href="#leccion-gratis">Probar primera lección <span>→</span></a>
+            </div>
+          </div>
+          <div class="module-list">
+            <article class="module open">
+              <button class="module-toggle" type="button" aria-expanded="true"><span class="module-num">01</span><div><small>MÓDULO 1</small><b>Ecuaciones e Inecuaciones</b></div><span class="module-meta">3 videos · 1 test</span><i>−</i></button>
+              <div class="module-content"><span>✓ Ecuaciones de primer grado</span><span>✓ Sistemas de ecuaciones</span><span>✓ Inecuaciones paso a paso</span></div>
+            </article>
+            <article class="module">
+              <button class="module-toggle" type="button" aria-expanded="false"><span class="module-num">02</span><div><small>MÓDULO 2</small><b>Funciones y Gráficas</b></div><span class="module-meta">4 videos · 1 test</span><i>+</i></button>
+              <div class="module-content"><span>✓ Concepto de función</span><span>✓ Dominio y rango</span><span>✓ Lectura de gráficas</span></div>
+            </article>
+            <article class="module">
+              <button class="module-toggle" type="button" aria-expanded="false"><span class="module-num">03</span><div><small>MÓDULO 3</small><b>Factorización avanzada</b></div><span class="module-meta">3 videos · 1 test</span><i>+</i></button>
+              <div class="module-content"><span>✓ Factor común</span><span>✓ Productos notables</span><span>✓ Trinomios</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section section-pad">
+      <div class="container testimonial-grid">
+        <div class="curriculum-note reveal">
+          <div class="check-seal" aria-hidden="true">✓</div>
+          <div><span>CONTENIDO RELEVANTE</span><h2>Diseñado según el currículo escolar y de academias locales.</h2><p>Aprende exactamente lo que necesitas para tu siguiente evaluación.</p></div>
+        </div>
+        <blockquote class="testimonial reveal delay-1">
+          <div class="quote-mark">“</div>
+          <p>Antes pasaba 3 horas buscando explicaciones en internet. Con AulaFácil repasé el tema en 20 minutos y practiqué con ejercicios como los de mi examen.</p>
+          <footer><span class="student-avatar">AM</span><div><strong>Andrea M.</strong><small>Estudiante de secundaria</small></div><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="pricing section-pad" id="precio">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div class="eyebrow eyebrow-blue">Un precio que sí cabe en tu bolsillo</div>
+          <h2>Invierte en tus notas, <span>sin gastar de más.</span></h2>
+          <p>Menos que una sola hora de clase particular. Aprende todo el mes.</p>
+        </div>
+        <div class="price-card reveal">
+          <div class="popular-ribbon">PLAN DE LANZAMIENTO</div>
+          <div class="price-intro">
+            <span class="plan-label">ACCESO COMPLETO · PILOTO</span>
+            <h3>Todo AulaFácil</h3>
+            <p>Empieza con Álgebra y accede a cada tema nuevo que publiquemos.</p>
+            <div class="price"><sup>S/</sup><strong>15</strong><span>/ mes<small>Aprox. $4 USD</small></span></div>
+            <div class="price-note">Cancela cuando quieras · Sin contratos</div>
+          </div>
+          <div class="price-features">
+            <h4>Tu plan incluye:</h4>
+            <ul>
+              <li><span>✓</span> Acceso ilimitado a todos los videos</li>
+              <li><span>✓</span> Banco de ejercicios y solucionarios</li>
+              <li><span>✓</span> Evaluaciones prácticas ilimitadas</li>
+              <li><span>✓</span> Nuevos temas agregados cada semana</li>
+              <li><span>✓</span> Acceso desde celular, tablet o PC</li>
+            </ul>
+            <a class="button button-primary button-full" href="#leccion-gratis">Obtener acceso inmediato <span>→</span></a>
+            <small class="secure-note">🔒 Registro seguro · Primera lección gratis</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-pad" id="leccion-gratis">
+      <div class="final-shape shape-one" aria-hidden="true"></div><div class="final-shape shape-two" aria-hidden="true"></div>
+      <div class="container cta-grid">
+        <div class="cta-copy reveal">
+          <div class="eyebrow eyebrow-light">Tu primera lección va por nuestra cuenta</div>
+          <h2>¿Listo para entender ese tema que parecía imposible?</h2>
+          <p>Déjanos tus datos y recibe acceso gratis a la primera lección de Álgebra. Sin tarjeta y sin compromiso.</p>
+          <ul>
+            <li><span>✓</span> Video explicativo completo</li>
+            <li><span>✓</span> Resumen descargable</li>
+            <li><span>✓</span> Test práctico con resultados</li>
+          </ul>
+        </div>
+        <form class="lead-form reveal delay-1" id="lead-form" novalidate>
+          <div class="form-head"><span>🎓</span><div><h3>Prueba AulaFácil gratis</h3><p>Te enviaremos el acceso a tu correo o WhatsApp.</p></div></div>
+          <label for="nombre">Tu nombre</label>
+          <div class="input-wrap"><span aria-hidden="true">☺</span><input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej. Carlos Mendoza" required></div>
+          <small class="field-error" data-error="nombre"></small>
+          <label for="contacto">Correo electrónico o WhatsApp</label>
+          <div class="input-wrap"><span aria-hidden="true">✉</span><input id="contacto" name="contacto" type="text" autocomplete="email" placeholder="correo@ejemplo.com o +51 999 999 999" required></div>
+          <small class="field-error" data-error="contacto"></small>
+          <label for="nivel">¿Cuál es tu nivel académico?</label>
+          <div class="input-wrap select-wrap"><span aria-hidden="true">▤</span><select id="nivel" name="nivel" required><option value="">Selecciona una opción</option><option>Secundaria</option><option>Instituto</option><option>Postulante</option></select></div>
+          <small class="field-error" data-error="nivel"></small>
+          <div class="honeypot" aria-hidden="true"><label for="website">No completar</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <button class="button button-primary button-full" type="submit"><span class="button-label">Quiero probar la lección gratis</span> <span class="button-arrow">→</span><span class="button-loader" aria-hidden="true"></span></button>
+          <div class="form-submit-error" role="alert" aria-live="assertive"></div>
+          <small class="privacy-note">Al registrarte aceptas recibir información sobre AulaFácil. Nada de spam.</small>
+          <div class="form-success" role="status" aria-live="polite"><span>✓</span><h3>¡Ya estás dentro!</h3><p>Registramos tu solicitud. Muy pronto recibirás el acceso a tu primera lección.</p></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div><a class="brand brand-light" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M8.5 11.5 20 6l11.5 5.5L20 17 8.5 11.5Z"/><path d="M12 15.5v7.7c0 2 3.6 4.8 8 4.8s8-2.8 8-4.8v-7.7"/><path d="M32 13v10"/></svg></span><span>Aula<span>Fácil</span></span></a><p>Aprende claro. Practica mejor.<br>Aprueba seguro.</p></div>
+      <div class="footer-links"><strong>Explora</strong><a href="#como-funciona">Cómo funciona</a><a href="#curso">Curso piloto</a><a href="#precio">Precios</a></div>
+      <div class="footer-links"><strong>Contacto</strong><a href="mailto:hola@aulafacil.pe">hola@aulafacil.pe</a><span>Lima, Perú</span></div>
+      <div class="footer-cta"><strong>Empieza hoy</strong><p>Tu próxima buena nota comienza con una lección.</p><a href="#leccion-gratis">Probar gratis →</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> AulaFácil. Todos los derechos reservados.</span><span>Hecho para estudiantes que quieren llegar más lejos ♥</span></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
